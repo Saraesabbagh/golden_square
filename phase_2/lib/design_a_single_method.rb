@@ -12,3 +12,28 @@ def reading_time_estimator(text)
   no_words = text.split(" ").length.to_f 
   no_words/200
 end
+
+#grammar_check = grammar_checker(text)
+
+#checks whether text is grammatically sound or not. if grammar is correct return true if there are errors return false. 
+#text is a string of words. 
+
+# def grammar_checker(text)
+#   word_list = text.split(" ")
+#   first, last = word_list[0][0], word_list[-1][-1]
+#   is_first_capital = ("A".."Z").include?(first)
+#   is_correct_punctutation = ["!", "?", "."].include?(last)
+#   if is_first_capital && is_correct_punctutation
+#     return true 
+#     puts "Well done!"
+#   else
+#     puts "booooo!"
+#     return false
+#   end
+# end
+
+def grammar_checker(text)
+  word_list = text.split(" ")
+  first, last = word_list[0][0], word_list[-1][-1]
+  (("A".."Z").include?(first) && ["!", "?", "."].include?(last)) ? true : false
+end
