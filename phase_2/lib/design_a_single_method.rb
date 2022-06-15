@@ -37,3 +37,22 @@ def grammar_checker(text)
   first, last = word_list[0][0], word_list[-1][-1]
   (("A".."Z").include?(first) && ["!", "?", "."].include?(last)) ? true : false
 end
+
+# Describe the Problem
+# As a user
+# So that I can keep track of my tasks
+# I want to check if a text includes the string #TODO.
+
+# Design the Method Signature
+# includes_todo = todo_checker(text)
+# text will be a string of words
+# includes_todo will return true or false depending on whether the text contains #TODO or not.
+
+def todo_checker(text)
+  if text.match("#TODO")
+    return true
+  else 
+    return false
+  end 
+end
+

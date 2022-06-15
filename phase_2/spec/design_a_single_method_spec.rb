@@ -36,7 +36,7 @@ RSpec.describe "grammar_checker method" do
 
 end 
 
-# Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+# "Lorem ipsum dolor sit amet consectetur adipisicing elit." Maxime mollitia,
 # molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
 # numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
 # optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
@@ -57,3 +57,16 @@ end
 # modi minima sunt esse temporibus sint culpa, recusandae aliquam numquam 
 # totam ratione voluptas quod exercitationem fuga. Possimus quis earum veniam 
 # quasi aliquam eligendi, placeat qui corporis!
+
+
+RSpec.describe "todo_checker method"  do
+  it "returns true if 'Lorem ipsum dolor sit amet consectetur adipisicing #TODO elit.' is passed to the method" do
+    expect(todo_checker('Lorem ipsum dolor sit amet consectetur adipisicing #TODO elit.')).to eq true
+  end 
+  it "returns false if 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' is passed to the method" do
+    expect(todo_checker('Lorem ipsum dolor sit amet consectetur adipisicing elit.')).to eq false
+  end 
+  it "returns true if '\#TODO' is passed to the method" do
+    expect(todo_checker('\#TODO')).to eq true
+  end 
+end
