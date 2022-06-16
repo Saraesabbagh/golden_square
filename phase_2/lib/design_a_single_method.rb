@@ -33,6 +33,9 @@ end
 # end
 
 def grammar_checker(text)
+  if text == ""
+    return false
+  end
   word_list = text.split(" ")
   first, last = word_list[0][0], word_list[-1][-1]
   (("A".."Z").include?(first) && ["!", "?", "."].include?(last)) ? true : false

@@ -34,6 +34,10 @@ RSpec.describe "grammar_checker method" do
     expect(grammar_checker("lorem ipsum dolor sit amet consectetur adipisicing elit")).to eq false
   end
 
+  it "returns false when '' is passed through" do
+    expect(grammar_checker("")).to eq false
+  end
+
 end 
 
 # "Lorem ipsum dolor sit amet consectetur adipisicing elit." Maxime mollitia,
