@@ -1,7 +1,7 @@
 class Todo
     def initialize(task) # task is a string
       @task = task
-      @mark_done = false
+      @done_tasks = false
     end
   
     def task
@@ -10,17 +10,16 @@ class Todo
     end
   
     def mark_done!
-        @mark_done = true
+        @done_tasks = true
       # Marks the todo as done
       # Returns nothing
     end
   
     def done?
-        @mark_done == true ? true : false
-         
-       
+      return @done_tasks
       # Returns true if the task is done
       # Otherwise, false
     end
   end
+  
   
